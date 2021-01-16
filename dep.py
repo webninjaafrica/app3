@@ -1,12 +1,12 @@
 from flask import Flask
-
+import json
 
 app2=Flask(__name__)
 
 
 @app2.route('/')
 def depl():
-    return '''
+    return json.loads('''
 
 
 {
@@ -273,7 +273,7 @@ def depl():
     }
   ]
 }
-'''
+''')
 
 
 if __name__=="__main__":
